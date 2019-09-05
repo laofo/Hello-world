@@ -14,4 +14,33 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+ test:
+    docker:
+      - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
+  deploy:
+    docker:
+      - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
+
 
